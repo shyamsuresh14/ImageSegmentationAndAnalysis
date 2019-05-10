@@ -1,2 +1,2 @@
-# ImageEraser
-Segmentation and Graph Cut
+# ImageSegmentationAndAnalysis
+Segmentation Methods and Graph Cut
