@@ -15,7 +15,7 @@ def merge_mean_color(graph, src, dst):
 
 #main
 #img = data.coffee()
-img = io.imread("images/brain_mri.jpg")
+img = io.imread("../images/brain_mri.jpg")
 img = cv2.resize(img, (1024, 1024))
 labels = segmentation.slic(img, compactness=30, n_segments=400)
 g = graph.rag_mean_color(img, labels, mode='similarity')
