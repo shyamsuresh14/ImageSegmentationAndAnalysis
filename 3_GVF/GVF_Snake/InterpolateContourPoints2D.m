@@ -29,7 +29,7 @@ function K=InterpolateContourPoints2D(P,nPoints)
 % Function is written by D.Kroon University of Twente (July 2010)
 
 % Interpolate points inbetween
-O(:,1)=interp(uint8([P(end-3:end,1);P(:,1);P(:,1);P(1:4,1)]),10);
+O(:,1)=interp([P(end-3:end,1);P(:,1);P(:,1);P(1:4,1)],10);
 O(:,2)=interp([P(end-3:end,2);P(:,2);P(:,2);P(1:4,2)],10);
 O=O(41:end-39,:); 
 

@@ -10,12 +10,16 @@ close all
 clear all
 
 I = imread('C:\scripts\IP\ImageSegmentationAndAnalysis\images\brain_mri.jpg');
+%I = imread('image001.raw')
 % Customerlized Mask
 m = zeros(size(I,1),size(I,2));
 m(20:120,20:120) = 1;
-seg = chenvese(I,m,500,0.1,'chan'); % ability on gray image
+seg = chenvese(I,m,500,0.1,'chan'); % ability on gray image   0.1 -> 0.01
 % Built-in Mask
-seg = chenvese(I,'medium',400,0.01,'chan'); % ability on gray image
+seg = chenvese(I,'medium',400,0.01,'chan');
+
+seg = chenvese(I,'whole',400,0.01,'chan'); % ability on gray image  0.02 -> 0.01
+imtool(imcomplement(seg))
 %-- End 
 
 %%
